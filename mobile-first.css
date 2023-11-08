@@ -4,14 +4,49 @@
     padding: 0;
 }
 
-:root {
-    --space: 1rem;
-}
-
-html {
-    font-size: 16px;
-}
-
 img {
-  
+  width: 100%;
+}
+main{
+    width:90vw;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+header{
+    display: grid;
+    align-items:center;
+}
+header h1, header picture{
+    grid-area: 1/1;
+}
+h1{
+    color: #fff;
+}
+article{
+border: 1px solid #333;
+}
+#first-section article{
+
+margin-bottom: 1rem;
+}
+
+#second-section{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+gap:1rem;
+}
+/* større skærme*/
+@media screen and (min-width:600px) {
+    h1{
+        color:#000;
+    }
+    #first-section article{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #first-section article:nth-child(even) p{
+        grid-column:1;
+        grid-row:1;
+    }
+    
 }
