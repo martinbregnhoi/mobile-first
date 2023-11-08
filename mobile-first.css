@@ -15,11 +15,13 @@ main{
 header{
     display: grid;
     align-items:center;
+    margin-bottom: 1rem;
 }
 header h1, header picture{
     grid-area: 1/1;
 }
 h1{
+    padding: 1rem;
     color: #fff;
 }
 article{
@@ -29,10 +31,13 @@ border: 1px solid #333;
 
 margin-bottom: 1rem;
 }
+#first-section article p, #second-section article{
+    padding: 1rem;
+}
 
 #second-section{
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap:1rem;
 }
 /* større skærme*/
@@ -43,6 +48,7 @@ gap:1rem;
     #first-section article{
         display:grid;
         grid-template-columns: 1fr 1fr;
+        align-items:center;
     }
     #first-section article:nth-child(even) p{
         grid-column:1;
