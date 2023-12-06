@@ -15,7 +15,24 @@
         </picture>
         
         <h1>Mobile First</h1>
-
+<div class="menucontainer">
+    <!— Burger knap —>
+    <button class="burger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </button>
+    <!— Burger knap slut —>
+        <!— menu —>
+            <nav>
+                <ul>
+                    <li>link 1</li>
+                    <li>link 2</li>
+                    <li>link 3</li>
+                    <li>link 3</li>
+                </ul>
+            </nav>
+            <!— menu slut —></div>
     
     </header>
     <main>
@@ -66,5 +83,23 @@
         </section>
     </main>
     <footer></footer>
+    <script>
+        function onLoad() {
+                // if (window.innerWidth <= 768) {
+
+                function toggleMenu() {
+                    document.querySelector(".burger").classList.toggle("change");
+                    document.querySelector("nav").classList.toggle("show");
+                }
+                document.querySelector(".burger").addEventListener("click", toggleMenu);
+                document.querySelector("ul").addEventListener("click", toggleMenu);
+
+            }
+            //}
+
+            document.addEventListener("DOMContentLoaded", function (event) {
+                onLoad();
+            });
+    </script>
 </body>
 </html>
